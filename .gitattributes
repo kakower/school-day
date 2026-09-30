@@ -1,0 +1,52 @@
+# ============================================================
+#  行尾（EOL）策略
+#  本仓库含 PDF / Excel 等二进制资源，它们内部存在大量“裸 LF”。
+#  若被 Git 当作文本处理，clone/checkout 时会插入 CR 字节，导致文件损坏。
+#  因此显式声明为 binary（等价于 -text -diff），禁止任何行尾转换。
+# ============================================================
+
+# ---- 文档 / 表格 / 图纸 ----
+*.pdf   binary
+*.xlsx  binary
+*.xls   binary
+*.docx  binary
+*.doc   binary
+*.pptx  binary
+*.ppt   binary
+
+# ---- 压缩包 ----
+*.zip   binary
+*.rar   binary
+*.7z    binary
+*.gz    binary
+
+# ---- 图片 ----
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.bmp   binary
+*.ico   binary
+
+# ---- 编译产物 / 固件（通常已被 .gitignore 排除） ----
+*.hex   binary
+*.bin   binary
+*.elf   binary
+*.axf   binary
+*.o     binary
+*.a     binary
+*.lib   binary
+
+# ============================================================
+#  文本文件：仓库内统一 LF，工作区按平台检出。
+#  Keil 工程文件固定使用 CRLF，与 MDK 在 Windows 下的写法保持一致。
+# ============================================================
+*.uvprojx  text eol=crlf
+*.uvoptx   text eol=crlf
+*.mxproject text eol=crlf
+*.c        text
+*.h        text
+*.s        text
+*.ioc      text
+.gitignore text
+.gitattributes text

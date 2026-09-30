@@ -1,0 +1,29 @@
+# ---- Keil MDK 编译产物 ----
+串口JQ8900/project/MDK-ARM/project/
+*.o
+*.axf
+*.crf
+*.d
+*.dep
+*.lnp
+*.htm
+*.build_log.htm
+*.map
+*.lst
+*.bak
+*.iex
+*.plg
+*.scvd
+*.tra
+
+# ---- Keil 用户界面/布局文件（因人而异） ----
+*.uvguix.*
+*.uvguix
+*.Administrator
+
+# ---- 系统 / 编辑器 ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
